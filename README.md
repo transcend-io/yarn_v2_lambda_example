@@ -1,5 +1,12 @@
 # Yarn v2 Lambda Example
 
+To create the lambda layer:
+
+```bash
+yarn workspace yarn-plugin-lambda-layer register
+yarn lambda layer
+```
+
 To bundle lambda code via webpack:
 
 ```bash

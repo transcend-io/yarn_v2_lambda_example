@@ -9,4 +9,6 @@
 #/.pnp.*
 
 build/
-.serverless
+bundles/
+.serverless/
+serverless-build/

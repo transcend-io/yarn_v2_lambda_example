@@ -1,13 +1,13 @@
 {
   "name": "sample-lambda",
   "dependencies": {
+    "@aws-sdk/client-sts": "^3.12.0",
     "sample-dependency": "workspace:*"
   },
   "devDependencies": {
     "serverless": "^2.35.0",
     "serverless-webpack": "^5.4.1",
     "webpack": "^5.32.0",
-    "webpack-cli": "^4.6.0",
-    "webpack-node-externals": "^2.5.2"
+    "webpack-cli": "^4.6.0"
   }
 }

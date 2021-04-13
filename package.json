@@ -6,5 +6,8 @@
   "resolutions": {
     "@serverless/utils": "arcanis/utils#mael/createrequire",
     "serverless": "arcanis/serverless#mael/createrequire"
+  },
+  "devDependencies": {
+    "@yarnpkg/builder": "^3.0.0-rc.2"
   }
 }
