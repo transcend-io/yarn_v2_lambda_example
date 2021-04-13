@@ -21,11 +21,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "yarn_v2_lambda_example",
         "reference": "workspace:."
+      },
+      {
+        "name": "sampleDependency",
+        "reference": "workspace:packages/sampleDependency"
+      },
+      {
+        "name": "sampleLambda",
+        "reference": "workspace:packages/sampleLambda"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
+      ["sampleDependency", ["workspace:packages/sampleDependency"]],
+      ["sampleLambda", ["workspace:packages/sampleLambda"]],
       ["yarn_v2_lambda_example", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -37,6 +47,35 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["left-pad", [
+        ["npm:1.3.0", {
+          "packageLocation": "./.yarn/cache/left-pad-npm-1.3.0-0382e69409-d27d5f51e3.zip/node_modules/left-pad/",
+          "packageDependencies": [
+            ["left-pad", "npm:1.3.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["sampleDependency", [
+        ["workspace:packages/sampleDependency", {
+          "packageLocation": "./packages/sampleDependency/",
+          "packageDependencies": [
+            ["sampleDependency", "workspace:packages/sampleDependency"],
+            ["left-pad", "npm:1.3.0"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["sampleLambda", [
+        ["workspace:packages/sampleLambda", {
+          "packageLocation": "./packages/sampleLambda/",
+          "packageDependencies": [
+            ["sampleLambda", "workspace:packages/sampleLambda"],
+            ["sampleDependency", "workspace:packages/sampleDependency"]
           ],
           "linkType": "SOFT",
         }]

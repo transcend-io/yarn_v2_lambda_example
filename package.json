@@ -1,3 +1,6 @@
 {
-  "name": "yarn_v2_lambda_example"
+  "name": "yarn_v2_lambda_example",
+  "workspaces": [
+    "packages/*"
+  ]
 }

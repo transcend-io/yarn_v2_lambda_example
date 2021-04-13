@@ -3,6 +3,30 @@
 
 __metadata:
   version: 4
+  cacheKey: 7
+
+"left-pad@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "left-pad@npm:1.3.0"
+  checksum: d27d5f51e3e25ffa7d4de92d62d740e723dfa7ce004f835592cc3e80d940303b29ceed43bf572a4071c58cb07a4558a40b50bfcbe2e1b911d2bef58c4e786613
+  languageName: node
+  linkType: hard
+
+"sampleDependency@workspace:*, sampleDependency@workspace:packages/sampleDependency":
+  version: 0.0.0-use.local
+  resolution: "sampleDependency@workspace:packages/sampleDependency"
+  dependencies:
+    left-pad: ^1.3.0
+  languageName: unknown
+  linkType: soft
+
+"sampleLambda@workspace:packages/sampleLambda":
+  version: 0.0.0-use.local
+  resolution: "sampleLambda@workspace:packages/sampleLambda"
+  dependencies:
+    sampleDependency: "workspace:*"
+  languageName: unknown
+  linkType: soft
 
 "yarn_v2_lambda_example@workspace:.":
   version: 0.0.0-use.local

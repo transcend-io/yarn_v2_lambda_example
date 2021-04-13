@@ -1,0 +1,6 @@
+{
+  "name": "sampleLambda",
+  "dependencies": {
+    "sampleDependency": "workspace:*"
+  }
+}
