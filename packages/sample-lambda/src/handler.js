@@ -1,5 +1,5 @@
-// Example workspace dependency 
-import { pad } from 'sample-dependency';
+// Example workspace dependency
+import { pad } from "sample-dependency";
 
 // Example aws dependency that will be excluded from both the lambda and lambda layer as Lambda has them built in
 import { STSClient, GetCallerIdentityCommand } from "@aws-sdk/client-sts";
@@ -16,9 +16,9 @@ export async function handler() {
 
   return {
     statusCode: 200,
-    headers: { 'Content-Type': 'application/json' },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       message: pad(`Received lambda successfully on lambda with arn: ${ Arn }`),
     }),
   };
-};
+}

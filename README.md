@@ -18,3 +18,9 @@ To deploy the lambda via serverless:
 ```bash
 yarn workspace sample-lambda run serverless deploy
 ```
+
+To check on logs after invoking the function via `curl <endpoint>`:
+
+```bash
+yarn workspace sample-lambda run serverless logs -f basicHttpHandler
+```

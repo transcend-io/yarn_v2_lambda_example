@@ -57,45 +57,50 @@ class LambdaLayerCommand extends BaseCommand {
         .filter(
           (descriptor) => project.tryWorkspaceByDescriptor(descriptor) === null
         )
-        .filter(
-          ({ name, scope }) =>
-            !(name === "aws-sdk" || scope?.startsWith("aws-sdk"))
-        )
-        .forEach(({ name, range }) => {
+        // TODO: https://github.com/aws/aws-sdk-js-v3/issues/2149 - do not include scope?.startsWith("aws-sdk") once fixed
+        // .filter(
+        //   ({ name, scope }) =>
+        //     !(name === "aws-sdk" || scope?.startsWith("aws-sdk"))
+        // )
+        .filter(({ name }) => name !== 'aws-sdk')
+        .forEach((descriptor) => {
+          const depName = structUtils.stringifyIdent(descriptor)
           if (
-            dependencies[name] !== undefined &&
-            dependencies[name] !== range
+            dependencies[depName] !== undefined &&
+            dependencies[depName] !== descriptor.range
           ) {
             throw Error(
-              `Found mismatched dependency versions for package ${name}`
+              `Found mismatched dependency versions for package ${depName}`
             );
           }
-          dependencies = { ...dependencies, [name]: range };
+          dependencies = { ...dependencies, [depName]: descriptor.range };
         });
     });
 
     // Construct a package.json file to write out to a new directory, along with other necessary files to install packages
     const layerDirectory = path.join(this.context.cwd, this.outputDir);
-    const layerPackageJsonPath = path.join(layerDirectory, "package.json");
+    const dependencyInstallDirectory = path.join(layerDirectory, "nodejs")
+    const layerPackageJsonPath = path.join(dependencyInstallDirectory, "package.json");
     const layerPackageJson = {
       name: "lambda-dependencies",
       description: "Lambda layer for dependencies",
+      type: "commonjs",
       dependencies,
     };
-    shelljs.rm("-rf", this.outputDir);
-    shelljs.mkdir(this.outputDir);
+    shelljs.rm('-rf', layerDirectory);
+    shelljs.mkdir("-p", dependencyInstallDirectory);
     shelljs.echo(JSON.stringify(layerPackageJson)).to(layerPackageJsonPath);
-    shelljs.echo(`yarnPath: ${configuration.get('yarnPath')}`).to(path.join(layerDirectory, '.yarnrc.yml'))
-    shelljs.cp('-f', path.join(project.cwd, configuration.get('lockfileFilename')), path.join(layerDirectory, 'yarn.lock'))
+    shelljs.echo(`yarnPath: ${configuration.get('yarnPath')}`).to(path.join(dependencyInstallDirectory, '.yarnrc.yml'))
+    shelljs.cp('-f', path.join(project.cwd, configuration.get('lockfileFilename')), path.join(dependencyInstallDirectory, 'yarn.lock'))
 
     // Install the deps to create the full lambda layer
     const layerConfiguration = await Configuration.find(
-      layerDirectory as PortablePath,
+      dependencyInstallDirectory as PortablePath,
       this.context.plugins
     );
     const { project: layerProject } = await Project.find(
       layerConfiguration,
-      layerDirectory as PortablePath,
+      dependencyInstallDirectory as PortablePath,
     );
     const layerCache = await Cache.find(layerConfiguration);
     const report = await StreamReport.start(

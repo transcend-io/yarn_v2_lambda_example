@@ -22,6 +22,11 @@ functions:
   basicHttpHandler:
     name: handle-request
     handler: src/handler.handler
+    layers:
+      - { Ref: YarnV2TestNodeModulesLambdaLayer }
+    environment:
+      # This ensures we can load PnP packages
+      NODE_OPTIONS: "--require /opt/nodejs/.pnp.cjs"
     events:
       - http:
           method: get
