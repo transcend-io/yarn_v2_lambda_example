@@ -6466,7 +6466,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serverless", "https://github.com/arcanis/serverless.git#commit=f89ffc6fe2a50c3efe96646a2d1e8149c6f47c42"],
             ["serverless-webpack", "virtual:adbf17210ae8ece5eb00dc6dda88b971ad0621ff35060893cf613af97e06a54e2828fc7ac55981a6e9939e923439b4473ef5f00f5d3ffea2f5ae6bcc230122d3#npm:5.4.1"],
             ["webpack", "virtual:adbf17210ae8ece5eb00dc6dda88b971ad0621ff35060893cf613af97e06a54e2828fc7ac55981a6e9939e923439b4473ef5f00f5d3ffea2f5ae6bcc230122d3#npm:5.32.0"],
-            ["webpack-cli", "virtual:adbf17210ae8ece5eb00dc6dda88b971ad0621ff35060893cf613af97e06a54e2828fc7ac55981a6e9939e923439b4473ef5f00f5d3ffea2f5ae6bcc230122d3#npm:4.6.0"]
+            ["webpack-cli", "virtual:adbf17210ae8ece5eb00dc6dda88b971ad0621ff35060893cf613af97e06a54e2828fc7ac55981a6e9939e923439b4473ef5f00f5d3ffea2f5ae6bcc230122d3#npm:4.6.0"],
+            ["webpack-node-externals", "npm:2.5.2"]
           ],
           "linkType": "SOFT",
         }]
@@ -7820,6 +7821,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack-merge", "npm:5.7.3"],
             ["clone-deep", "npm:4.0.1"],
             ["wildcard", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["webpack-node-externals", [
+        ["npm:2.5.2", {
+          "packageLocation": "./.yarn/cache/webpack-node-externals-npm-2.5.2-5b19136fc9-79faea3737.zip/node_modules/webpack-node-externals/",
+          "packageDependencies": [
+            ["webpack-node-externals", "npm:2.5.2"]
           ],
           "linkType": "HARD",
         }]

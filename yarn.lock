@@ -5617,6 +5617,7 @@ resolve@^1.9.0:
     serverless-webpack: ^5.4.1
     webpack: ^5.32.0
     webpack-cli: ^4.6.0
+    webpack-node-externals: ^2.5.2
   languageName: unknown
   linkType: soft
 
@@ -6797,6 +6798,13 @@ resolve@^1.9.0:
     clone-deep: ^4.0.1
     wildcard: ^2.0.0
   checksum: 5e28f66f597cb34ac5f7ca0881cd3f106265091e47d7cda9ae00f4902283efdfdab36a70e34a9cf7b1467aac021178981513393b7dcddbb84caf11920f269379
+  languageName: node
+  linkType: hard
+
+"webpack-node-externals@npm:^2.5.2":
+  version: 2.5.2
+  resolution: "webpack-node-externals@npm:2.5.2"
+  checksum: 79faea373738549ea3a8ce8f0d136629ad1a6f539e154f73f8dfb4f658ad8d24f5e393c03d88dd5821b9b38f493716a1fda581992083e710c41eb956c3d1a028
   languageName: node
   linkType: hard
 

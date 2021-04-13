@@ -1,4 +1,5 @@
 const path = require('path');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   mode: 'production',
@@ -6,6 +7,8 @@ module.exports = {
     extensions: ['.js'],
   },
   target: 'node',
+  // externals: [nodeExternals()],
+  externals: ['left-pad'],
   entry: {
     main: path.join(__dirname, 'src/handler.js'),
   },
