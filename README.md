@@ -1,1 +1,7 @@
-# yarn_v2_lambda_example
+# Yarn v2 Lambda Example
+
+To bundle lambda code via webpack:
+
+```bash
+yarn workspace sample-lambda run webpack --config webpack.js
+```

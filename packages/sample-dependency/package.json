@@ -1,0 +1,7 @@
+{
+  "name": "sample-dependency",
+  "main": "src/pad.js",
+  "dependencies": {
+    "left-pad": "^1.3.0"
+  }
+}

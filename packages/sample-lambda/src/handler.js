@@ -1,5 +1,5 @@
 // Example workspace dependency 
-import pad from 'sampleDependency';
+import { pad } from 'sample-dependency';
 
 /**
  * Lambda handler for the webhook
