@@ -2,5 +2,9 @@
   "name": "yarn_v2_lambda_example",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "resolutions": {
+    "@serverless/utils": "arcanis/utils#mael/createrequire",
+    "serverless": "arcanis/serverless#mael/createrequire"
+  }
 }

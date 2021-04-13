@@ -1,0 +1,24 @@
+service: yarn-v2-lambda-example
+
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+
+custom:
+  webpack:
+    webpackConfig: './webpack.js'
+    includeModules: false
+    packager: yarn
+
+functions:
+  basicHttpHandler:
+    name: handle-request
+    handler: src/handler.handler
+    events:
+      - http:
+          method: get
+          path: sample
