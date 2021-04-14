@@ -6,7 +6,7 @@ module.exports = {
     extensions: ['.js'],
   },
   target: 'node',
-  externals: ['left-pad', '@aws-sdk/client-sts'],
+  externals: ['left-pad', '@aws-sdk/client-sts', 'datadog-lambda-js'],
   entry: {
     main: path.join(__dirname, 'src/handler.js'),
   },

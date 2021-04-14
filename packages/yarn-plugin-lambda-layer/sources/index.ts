@@ -17,8 +17,8 @@ import { PortablePath } from "@yarnpkg/fslib";
 class LambdaLayerCommand extends BaseCommand {
   static paths = [[`lambda`, `layer`]];
 
-  package = Option.String(`--package`, `sample-lambda`, {
-    description: `Name of the package to build a layer for`,
+  workspace = Option.String(`--workspace`, `sample-lambda`, {
+    description: `Name of the workspace to build a layer for`,
   });
 
   outputDir = Option.String(`--output`, `serverless-build`, {
@@ -40,10 +40,10 @@ class LambdaLayerCommand extends BaseCommand {
       restoreResolutions: false,
     });
 
-    // Find all deep workspace dependencies of the named package
+    // Find all deep workspace dependencies of the named workspace
     let dependencies = {};
     const requiredWorkspaces = new Set([
-      project.getWorkspaceByIdent(structUtils.parseIdent(this.package)),
+      project.getWorkspaceByIdent(structUtils.parseIdent(this.workspace)),
     ]);
     requiredWorkspaces.forEach((workspace) => {
       // For all workspace deps, add them to be searched later

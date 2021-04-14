@@ -1504,6 +1504,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/cls-hooked", [
+        ["npm:4.3.3", {
+          "packageLocation": "./.yarn/cache/@types-cls-hooked-npm-4.3.3-74d7405afb-281e7ac237.zip/node_modules/@types/cls-hooked/",
+          "packageDependencies": [
+            ["@types/cls-hooked", "npm:4.3.3"],
+            ["@types/node", "npm:14.14.37"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/emscripten", [
         ["npm:1.39.4", {
           "packageLocation": "./.yarn/cache/@types-emscripten-npm-1.39.4-4d03380faa-7a51e08b22.zip/node_modules/@types/emscripten/",
@@ -3131,6 +3141,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["async-hook-jl", [
+        ["npm:1.7.6", {
+          "packageLocation": "./.yarn/cache/async-hook-jl-npm-1.7.6-9999815029-f84421c83a.zip/node_modules/async-hook-jl/",
+          "packageDependencies": [
+            ["async-hook-jl", "npm:1.7.6"],
+            ["stack-chain", "npm:1.3.7"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["asynckit", [
         ["npm:0.4.0", {
           "packageLocation": "./.yarn/cache/asynckit-npm-0.4.0-c718858525-7b78c451df.zip/node_modules/asynckit/",
@@ -3145,6 +3165,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/at-least-node-npm-1.0.0-2b36e661fa-463e2f8e43.zip/node_modules/at-least-node/",
           "packageDependencies": [
             ["at-least-node", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["atomic-batcher", [
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/atomic-batcher-npm-1.0.2-6fcd3a3097-0f06a3b416.zip/node_modules/atomic-batcher/",
+          "packageDependencies": [
+            ["atomic-batcher", "npm:1.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -3172,6 +3201,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/aws-sign2-npm-0.7.0-656c6cb84d-b148b0bb07.zip/node_modules/aws-sign2/",
           "packageDependencies": [
             ["aws-sign2", "npm:0.7.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["aws-xray-sdk-core", [
+        ["npm:3.3.1", {
+          "packageLocation": "./.yarn/cache/aws-xray-sdk-core-npm-3.3.1-86f39a9516-be928b1504.zip/node_modules/aws-xray-sdk-core/",
+          "packageDependencies": [
+            ["aws-xray-sdk-core", "npm:3.3.1"],
+            ["@types/cls-hooked", "npm:4.3.3"],
+            ["atomic-batcher", "npm:1.0.2"],
+            ["cls-hooked", "npm:4.2.2"],
+            ["semver", "npm:5.7.1"]
           ],
           "linkType": "HARD",
         }]
@@ -3290,6 +3332,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/big.js-npm-5.2.2-e147c30820-b89b6e8419.zip/node_modules/big.js/",
           "packageDependencies": [
             ["big.js", "npm:5.2.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["bignumber.js", [
+        ["npm:9.0.1", {
+          "packageLocation": "./.yarn/cache/bignumber.js-npm-9.0.1-270d0c8a55-6e72f6069d.zip/node_modules/bignumber.js/",
+          "packageDependencies": [
+            ["bignumber.js", "npm:9.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -3907,6 +3958,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["cls-hooked", [
+        ["npm:4.2.2", {
+          "packageLocation": "./.yarn/cache/cls-hooked-npm-4.2.2-db33b9b95f-3a8a4e30b0.zip/node_modules/cls-hooked/",
+          "packageDependencies": [
+            ["cls-hooked", "npm:4.2.2"],
+            ["async-hook-jl", "npm:1.7.6"],
+            ["emitter-listener", "npm:1.1.2"],
+            ["semver", "npm:5.7.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["code-point-at", [
         ["npm:1.1.0", {
           "packageLocation": "./.yarn/cache/code-point-at-npm-1.1.0-37de5fe566-17d5666611.zip/node_modules/code-point-at/",
@@ -4261,6 +4324,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["dashdash", "npm:1.14.1"],
             ["assert-plus", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["datadog-lambda-js", [
+        ["npm:3.51.0", {
+          "packageLocation": "./.yarn/cache/datadog-lambda-js-npm-3.51.0-021a3e2bd2-e3982dfa32.zip/node_modules/datadog-lambda-js/",
+          "packageDependencies": [
+            ["datadog-lambda-js", "npm:3.51.0"],
+            ["aws-xray-sdk-core", "npm:3.3.1"],
+            ["bignumber.js", "npm:9.0.1"],
+            ["hot-shots", "npm:8.3.0"],
+            ["promise-retry", "npm:2.0.1"],
+            ["serialize-error", "npm:8.0.1"],
+            ["shimmer", "npm:1.2.1"]
           ],
           "linkType": "HARD",
         }]
@@ -4677,6 +4755,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.3.713-7d67bcee25-144f564c74.zip/node_modules/electron-to-chromium/",
           "packageDependencies": [
             ["electron-to-chromium", "npm:1.3.713"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["emitter-listener", [
+        ["npm:1.1.2", {
+          "packageLocation": "./.yarn/cache/emitter-listener-npm-1.1.2-0fe118d0b3-05166bad42.zip/node_modules/emitter-listener/",
+          "packageDependencies": [
+            ["emitter-listener", "npm:1.1.2"],
+            ["shimmer", "npm:1.2.1"]
           ],
           "linkType": "HARD",
         }]
@@ -6091,6 +6179,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/has-unicode-npm-2.0.1-893adb4747-1eab07a743.zip/node_modules/has-unicode/",
           "packageDependencies": [
             ["has-unicode", "npm:2.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["hot-shots", [
+        ["npm:8.3.0", {
+          "packageLocation": "./.yarn/cache/hot-shots-npm-8.3.0-820ff3ccf3-431293cbc2.zip/node_modules/hot-shots/",
+          "packageDependencies": [
+            ["hot-shots", "npm:8.3.0"],
+            ["unix-dgram", "npm:2.0.4"]
           ],
           "linkType": "HARD",
         }]
@@ -9124,8 +9222,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["sample-lambda", "workspace:packages/sample-lambda"],
             ["@aws-sdk/client-sts", "npm:3.12.0"],
+            ["datadog-lambda-js", "npm:3.51.0"],
             ["sample-dependency", "workspace:packages/sample-dependency"],
             ["serverless", "https://github.com/arcanis/serverless.git#commit=f89ffc6fe2a50c3efe96646a2d1e8149c6f47c42"],
+            ["serverless-plugin-datadog", "npm:2.18.0"],
             ["serverless-webpack", "virtual:adbf17210ae8ece5eb00dc6dda88b971ad0621ff35060893cf613af97e06a54e2828fc7ac55981a6e9939e923439b4473ef5f00f5d3ffea2f5ae6bcc230122d3#npm:5.4.1"],
             ["webpack", "virtual:adbf17210ae8ece5eb00dc6dda88b971ad0621ff35060893cf613af97e06a54e2828fc7ac55981a6e9939e923439b4473ef5f00f5d3ffea2f5ae6bcc230122d3#npm:5.32.0"],
             ["webpack-cli", "virtual:adbf17210ae8ece5eb00dc6dda88b971ad0621ff35060893cf613af97e06a54e2828fc7ac55981a6e9939e923439b4473ef5f00f5d3ffea2f5ae6bcc230122d3#npm:4.6.0"]
@@ -9215,6 +9315,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["serialize-error", [
+        ["npm:8.0.1", {
+          "packageLocation": "./.yarn/cache/serialize-error-npm-8.0.1-dd95765c83-766ca05d85.zip/node_modules/serialize-error/",
+          "packageDependencies": [
+            ["serialize-error", "npm:8.0.1"],
+            ["type-fest", "npm:0.20.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["serialize-javascript", [
         ["npm:4.0.0", {
           "packageLocation": "./.yarn/cache/serialize-javascript-npm-4.0.0-b4aeff413b-3273b3394b.zip/node_modules/serialize-javascript/",
@@ -9288,6 +9398,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["uuid", "npm:8.3.2"],
             ["yaml-ast-parser", "npm:0.0.43"],
             ["yargs-parser", "npm:20.2.7"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["serverless-plugin-datadog", [
+        ["npm:2.18.0", {
+          "packageLocation": "./.yarn/cache/serverless-plugin-datadog-npm-2.18.0-ee1da84ee4-aadefc522c.zip/node_modules/serverless-plugin-datadog/",
+          "packageDependencies": [
+            ["serverless-plugin-datadog", "npm:2.18.0"]
           ],
           "linkType": "HARD",
         }]
@@ -9392,6 +9511,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["glob", "npm:7.1.6"],
             ["interpret", "npm:1.4.0"],
             ["rechoir", "npm:0.6.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["shimmer", [
+        ["npm:1.2.1", {
+          "packageLocation": "./.yarn/cache/shimmer-npm-1.2.1-8b50bf3206-aa0d6252ad.zip/node_modules/shimmer/",
+          "packageDependencies": [
+            ["shimmer", "npm:1.2.1"]
           ],
           "linkType": "HARD",
         }]
@@ -9697,6 +9825,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["ssri", "npm:8.0.1"],
             ["minipass", "npm:3.1.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["stack-chain", [
+        ["npm:1.3.7", {
+          "packageLocation": "./.yarn/cache/stack-chain-npm-1.3.7-c803ef2abb-c2428e794a.zip/node_modules/stack-chain/",
+          "packageDependencies": [
+            ["stack-chain", "npm:1.3.7"]
           ],
           "linkType": "HARD",
         }]
@@ -10518,6 +10655,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/universalify-npm-2.0.0-03b8b418a8-2406a4edf4.zip/node_modules/universalify/",
           "packageDependencies": [
             ["universalify", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["unix-dgram", [
+        ["npm:2.0.4", {
+          "packageLocation": "./.yarn/unplugged/unix-dgram-npm-2.0.4-37ea4951a6/node_modules/unix-dgram/",
+          "packageDependencies": [
+            ["unix-dgram", "npm:2.0.4"],
+            ["bindings", "npm:1.5.0"],
+            ["nan", "npm:2.14.2"],
+            ["node-gyp", "npm:8.0.0"]
           ],
           "linkType": "HARD",
         }]
