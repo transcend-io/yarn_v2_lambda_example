@@ -14,7 +14,7 @@ export async function handler() {
   const client = new STSClient();
   const { Arn } = await client.send(new GetCallerIdentityCommand({}))
 
-  console.log("A test log to see in Datadog")
+  console.log("A test log to see in Datadog");
 
   return {
     statusCode: 200,

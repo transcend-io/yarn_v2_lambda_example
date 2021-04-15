@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'production',
@@ -10,6 +11,12 @@ module.exports = {
   entry: {
     main: path.join(__dirname, 'src/handler.js'),
   },
+  plugins: [
+    new webpack.BannerPlugin({
+      banner: `require('/opt/nodejs/.pnp.cjs').setup();`,
+      raw: true,
+    })
+  ],
   output: {
     libraryTarget: 'commonjs',
     path: path.join(__dirname, 'build'),
