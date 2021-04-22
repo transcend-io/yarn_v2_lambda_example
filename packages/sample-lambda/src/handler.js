@@ -1,7 +1,7 @@
 // Example workspace dependency
 import { pad } from "sample-dependency";
 
-// Example aws dependency that will be excluded from both the lambda and lambda layer as Lambda has them built in
+// Example aws dependency
 import { STSClient, GetCallerIdentityCommand } from "@aws-sdk/client-sts";
 
 /**
@@ -13,6 +13,8 @@ import { STSClient, GetCallerIdentityCommand } from "@aws-sdk/client-sts";
 export async function handler() {
   const client = new STSClient();
   const { Arn } = await client.send(new GetCallerIdentityCommand({}))
+
+  console.log("A test log to see in Datadog");
 
   return {
     statusCode: 200,
