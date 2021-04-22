@@ -24,3 +24,17 @@ To check on logs after invoking the function via `curl <endpoint>`:
 ```bash
 yarn workspace sample-lambda run serverless logs -f basicHttpHandler
 ```
+
+## Esbuild example
+
+To build the esbuild example, run:
+
+```bash
+yarn workspace sample-lambda-esbuild node build.js
+```
+
+And to deploy run:
+
+```bash
+yarn workspace sample-lambda-esbuild run serverless deploy
+```

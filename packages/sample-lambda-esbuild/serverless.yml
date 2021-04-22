@@ -1,0 +1,22 @@
+service: yarn-v2-lambda-example-esbuild
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: eu-west-1
+
+package:
+  include:
+    - build/handler.js
+  exclude:
+    - '**'
+
+functions:
+  basicHttpHandler:
+    name: handle-request-esbuild
+    handler: build/handler.handler
+    runtime: nodejs14.x
+    events:
+      - http:
+          method: get
+          path: sample
