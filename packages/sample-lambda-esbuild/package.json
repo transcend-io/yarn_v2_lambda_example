@@ -1,0 +1,17 @@
+{
+  "name": "sample-lambda-esbuild",
+  "dependencies": {
+    "@aws-sdk/client-sts": "^3.12.0",
+    "datadog-lambda-js": "^3.51.0",
+    "sample-dependency": "workspace:*"
+  },
+  "devDependencies": {
+    "@yarnpkg/esbuild-plugin-pnp": "^1.0.0-rc.2",
+    "esbuild": "^0.11.11",
+    "serverless": "^2.35.0",
+    "serverless-plugin-datadog": "^2.18.0",
+    "serverless-webpack": "^5.4.1",
+    "webpack": "^5.32.0",
+    "webpack-cli": "^4.6.0"
+  }
+}

@@ -12,3 +12,4 @@ build/
 bundles/
 .serverless/
 serverless-build/
+.DS_Store
